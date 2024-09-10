@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Gussing The Random Number</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .inp {
+            padding: 10px;
+            /* background-color: red; */
+            border: 2px solid black;
+            border-radius: 5px;
+            /* color: black; */
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: sans-serif;
+            width: 100px;
+            height: 50px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inp::placeholder {
+            color: black;
+        }
+
+        .inp:focus::placeholder {
+            color: transparent;
+        }
+
+        .inp:focus {
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .guss {
+            padding: 10px;
+            background-color: rebeccapurple;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: sans-serif;
+            width: 200px;
+            margin: 15px;
+        }
+
+        .attempts {
+            padding: 10px;
+            background-color: rebeccapurple;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: sans-serif;
+            width: 200px;
+            margin: 15px;
+        }
+
+        span {
+            color: red;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .less,
+        .more,
+        .equal {
+            padding: 10px;
+            background-color: rebeccapurple;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: sans-serif;
+
+            margin: 15px;
+        }
+
+        .win,
+        .lose {
+            border-radius: 5px;
+            display: flex;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            transform: translate(-50%, -50%);
+            position: fixed;
+            top: 66%;
+            left: 50%;
+            width: 44%;
+            min-width: 200px;
+            height: 44%;
+            z-index: 22;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .win {
+            background-color: green;
+        }
+
+        .lose {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="greeting-text">
+            <h3 class="text1">I am thinking of a number between 1-100.</h3>
+            <h3 class="text2"> Can you guss it?</h3>
+            <h3 class="text3"> Be careful you only have <span>7</span> tries!</h3>
+        </div>
+        <div class="input-container">
+            <input class="inp" id="inp">
+            <button id="guss" class="guss">Guss</button>
+            <button class="attempts" id="attempts">Attempts = <span class="tries" id="tries">7</span></button>
+            <div class="more-less-container" id="more-less-container">
+                <!-- <button class="less" id="less">The entered value is less than the random number </button>
+            <button class="more" id="more">The entered value is greater than the random number</button>
+            <button class="equal" id="equal">The entered value is equal to the random number</button> -->
+            </div>
+        </div>
+        <div class="win" id="win">
+            Congratulation You Won!
+            <audio id="win-audio" src="./music/Winning Sound Effect.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="lose" id="lose">
+            Oops you lost!
+            <audio id="lose-audio" src="./music/Super Mario Bros - game over song.mp3"></audio>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
