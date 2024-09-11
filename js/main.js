@@ -14,7 +14,7 @@ let winAudio = document.getElementById("win-audio");
 
 guss.addEventListener("click", gusstheNumber)
 
-const randomNumber = Math.floor(Math.random() * 101);
+const randomNumber = Math.floor(Math.random() * 101 + 1);
 console.log(randomNumber, "randomNumber")
 
 function gusstheNumber() {
